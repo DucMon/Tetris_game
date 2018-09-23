@@ -24,6 +24,7 @@ namespace Tetris_NKĐ
         private Board board;
         private KeyboardInput input = new KeyboardInput();
         private Dictionary<string, oVuong> boardCells = new Dictionary<string, oVuong>();
+        String[] paths, files; // ten bai hat & dia chi
        
         public Tetris()
         {
@@ -146,7 +147,7 @@ namespace Tetris_NKĐ
         {
             this.tickTimer.Enabled = false;
             this.playing = false;
-            DialogResult a = MessageBox.Show("YOU LOSE!", "ThongBao", MessageBoxButtons.OK);
+            DialogResult a = MessageBox.Show("YOU LOSE! PLAY AGAIN?", "Warning!", MessageBoxButtons.OK);
             if (this.board.score > this.highScore)
             {
                 this.highScore = this.board.score;
@@ -244,6 +245,31 @@ namespace Tetris_NKĐ
         private void richTextBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonSelectSong_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Multiselect = true;
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                files = ofd.SafeFileNames;
+                paths = ofd.FileNames;
+                for(int i = 0; i < files.Length;i++)
+                {
+                    listMusic.Items.Add(files[i]);
+                }
+            }
+        }
+
+        private void listMusic_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = paths[listMusic.SelectedIndex];
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

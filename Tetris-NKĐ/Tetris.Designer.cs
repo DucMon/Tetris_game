@@ -44,6 +44,11 @@
             this.textBoxHighScore = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxRowsCompleted = new System.Windows.Forms.RichTextBox();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.listMusic = new System.Windows.Forms.ListBox();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonSelectSong = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // boardPanel
@@ -146,7 +151,7 @@
             this.textBoxLevel.Location = new System.Drawing.Point(472, 215);
             this.textBoxLevel.Name = "textBoxLevel";
             this.textBoxLevel.ReadOnly = true;
-            this.textBoxLevel.Size = new System.Drawing.Size(61, 35);
+            this.textBoxLevel.Size = new System.Drawing.Size(114, 35);
             this.textBoxLevel.TabIndex = 9;
             this.textBoxLevel.Text = "";
             // 
@@ -206,14 +211,79 @@
             this.textBoxRowsCompleted.Location = new System.Drawing.Point(472, 391);
             this.textBoxRowsCompleted.Name = "textBoxRowsCompleted";
             this.textBoxRowsCompleted.ReadOnly = true;
-            this.textBoxRowsCompleted.Size = new System.Drawing.Size(61, 35);
+            this.textBoxRowsCompleted.Size = new System.Drawing.Size(114, 35);
             this.textBoxRowsCompleted.TabIndex = 13;
             this.textBoxRowsCompleted.Text = "";
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.Red;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("Digital-7 Italic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonClose.Location = new System.Drawing.Point(539, 12);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(47, 45);
+            this.buttonClose.TabIndex = 15;
+            this.buttonClose.Text = "X";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // listMusic
+            // 
+            this.listMusic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.listMusic.Font = new System.Drawing.Font("Digital-7", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listMusic.ForeColor = System.Drawing.Color.Lime;
+            this.listMusic.FormattingEnabled = true;
+            this.listMusic.ItemHeight = 11;
+            this.listMusic.Items.AddRange(new object[] {
+            "",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a"});
+            this.listMusic.Location = new System.Drawing.Point(315, 520);
+            this.listMusic.Name = "listMusic";
+            this.listMusic.ScrollAlwaysVisible = true;
+            this.listMusic.Size = new System.Drawing.Size(225, 48);
+            this.listMusic.Sorted = true;
+            this.listMusic.TabIndex = 16;
+            this.listMusic.SelectedIndexChanged += new System.EventHandler(this.listMusic_SelectedIndexChanged);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(315, 563);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(225, 47);
+            this.axWindowsMediaPlayer1.TabIndex = 17;
+            // 
+            // buttonSelectSong
+            // 
+            this.buttonSelectSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonSelectSong.FlatAppearance.BorderSize = 0;
+            this.buttonSelectSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelectSong.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelectSong.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonSelectSong.Location = new System.Drawing.Point(546, 520);
+            this.buttonSelectSong.Name = "buttonSelectSong";
+            this.buttonSelectSong.Size = new System.Drawing.Size(40, 90);
+            this.buttonSelectSong.TabIndex = 18;
+            this.buttonSelectSong.Text = "✓";
+            this.buttonSelectSong.UseVisualStyleBackColor = false;
+            this.buttonSelectSong.Click += new System.EventHandler(this.buttonSelectSong_Click);
             // 
             // Tetris
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(544, 618);
+            this.ClientSize = new System.Drawing.Size(593, 618);
+            this.Controls.Add(this.buttonSelectSong);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.listMusic);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxRowsCompleted);
             this.Controls.Add(this.label4);
@@ -227,12 +297,15 @@
             this.Controls.Add(this.buttonResume);
             this.Controls.Add(this.labelGameOver);
             this.Controls.Add(this.boardPanel);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "Tetris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tetris_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tetris_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +327,10 @@
         private System.Windows.Forms.RichTextBox textBoxHighScore;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox textBoxRowsCompleted;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.ListBox listMusic;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Button buttonSelectSong;
     }
 }
 

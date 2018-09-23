@@ -1,0 +1,10 @@
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris-NKĐ.csprojResolveAssemblyReference.cache
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris_NKĐ.oVuong.resources
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris_NKĐ.Properties.Resources.resources
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris-NKĐ.csproj.GenerateResource.Cache
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\bin\Debug\Tetris-NKĐ.exe.config
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\bin\Debug\Tetris-NKĐ.exe
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\bin\Debug\Tetris-NKĐ.pdb
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris-NKĐ.exe
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris-NKĐ.pdb
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris_NKĐ.Tetris.resources

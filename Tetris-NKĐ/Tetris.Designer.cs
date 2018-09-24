@@ -237,16 +237,8 @@
             this.listMusic.ForeColor = System.Drawing.Color.Lime;
             this.listMusic.FormattingEnabled = true;
             this.listMusic.ItemHeight = 11;
-            this.listMusic.Items.AddRange(new object[] {
-            "",
-            "a",
-            "a",
-            "a",
-            "a",
-            "a"});
             this.listMusic.Location = new System.Drawing.Point(315, 520);
             this.listMusic.Name = "listMusic";
-            this.listMusic.ScrollAlwaysVisible = true;
             this.listMusic.Size = new System.Drawing.Size(225, 48);
             this.listMusic.Sorted = true;
             this.listMusic.TabIndex = 16;

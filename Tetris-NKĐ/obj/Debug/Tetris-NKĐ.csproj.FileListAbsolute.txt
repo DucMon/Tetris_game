@@ -13,3 +13,7 @@ C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\bi
 C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Interop.WMPLib.dll
 C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris-NKĐ.csproj.ResolveComReference.cache
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\bin\Debug\Tetris-NKĐ.exe.manifest
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\bin\Debug\Tetris-NKĐ.application
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris-NKĐ.exe.manifest
+C:\Users\Monmon\documents\visual studio 2017\Projects\Tetris-NKĐ\Tetris-NKĐ\obj\Debug\Tetris-NKĐ.application
